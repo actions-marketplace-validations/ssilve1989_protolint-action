@@ -17,4 +17,4 @@ runs:
   args:
     - protolint
     - lint
-    - ${{ GITHUB_WORKSPACE }}
+    - $GITHUB_WORKSPACE
