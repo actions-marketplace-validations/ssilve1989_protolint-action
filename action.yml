@@ -1,15 +1,15 @@
 name: "Protolint Action"
 description: "A tool to enforce Protocol Buffer style and conventions"
-author: "Plex Systems"
+author: "Steven Silvestri"
 
 branding:
   icon: "code"
   color: "black"
 
 inputs:
-  configDirectory:
-    description: "the path to where the .protolint.yaml configuration exists"
-    required: true
+  args:
+    description: "protolint arguments"
+    required: false
 
 runs:
   using: "docker"
@@ -17,4 +17,4 @@ runs:
   args:
     - protolint
     - lint
-    - $GITHUB_WORKSPACE
+    - ${{ inputs.args }}
